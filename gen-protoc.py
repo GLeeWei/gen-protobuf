@@ -1,5 +1,5 @@
 import os, sys, shutil, platform
-current_dir = os.getcwd()
+current_dir = os.path.dirname(os.path.realpath(__file__))
 sys.path.append(os.path.join(current_dir, "./js"))
 sys.path.append(os.path.join(current_dir, "./dart"))
 from gen_protoc_js import protos_to_js
