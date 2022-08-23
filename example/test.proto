@@ -1,0 +1,44 @@
+syntax = "proto3";
+option java_package = "com.test.proto";
+option java_outer_classname = "BaseProto";
+
+message ChatItem
+{
+  int32 type = 1; // 1个人，2系统,3跑马灯
+  int64 time = 2; // 时间
+  string text = 3; //消息内容 name
+  int64 senderUid = 4; // 发送者uid（-1是系统）
+  int32 gameId = 5; // 游戏id
+  int32 action = 6;
+}
+message RoleInfo
+{
+  int64 uid = 1; // uid
+  string name = 2; // 昵称
+  int32 pic = 3; // 玩家头像地址
+  int32 sex = 4; // 性别
+  int32 level = 5; // 等级(段位)
+  bool friend = 6; // 是否为好友,1是
+  int32 age = 7; // 年龄
+  int32 score = 8; // 积分
+  string city = 10; // 所在地区
+  int32 type = 11; // 状态1在线，2战斗中，0下线
+  int32 distance = 12; // 距离
+  string pickUrl = 13; // 头像地址
+}
+// 单独给info发送的位置消息
+message PositionInfo
+{
+  double latitude = 1; // 纬度
+  double longitude = 2; // 经度
+  string city = 3; // 所在地区
+}
+
+// 他人的的位置消息
+message FriendPositionInfo
+{
+  int64 uid = 1; // uid
+  int32 distance = 2; // 距离
+  string city = 3; // 所在地区
+  int32 type = 4; // 状态1在线，2战斗中，0下线
+}
