@@ -34,7 +34,7 @@ def protos_to_js(srcDir, destDir, bundle, ts):
         bundleName = os.path.join(destDir, bundle)
         sProtoList = ' '.join(protoList)
         print('gen ' + sProtoList)
-        os.system("pbjs -t static-module -w commonjs -o %s.js %s --no-beautify --no-typeurl " % (bundleName, sProtoList))
+        os.system("pbjs -t static-module -w commonjs -o %s.js %s --no-beautify --no-typeurl --no-create" % (bundleName, sProtoList))
         ts and os.system("pbts -o %s.d.ts %s.js" % (bundleName, bundleName))
 
 
