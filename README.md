@@ -10,7 +10,7 @@ This can be used to generate static code for google protobuf.
 
   -d, --dest      	destination dir.
 
-  -l, --lanuage   	complie target lanuage, support js, ts,  dart, cpp, objc, csharp, java, kotlin, python, ruby, php
+  -l, --lanuage   	complie target lanuage, support js, ts, go, dart, cpp, objc, csharp, java, kotlin, python, ruby, php
 
   -bundle      		bundle name, only support ts or js, deafult: protos
 ```
