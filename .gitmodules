@@ -1,3 +1,0 @@
-[submodule "dart/protobuf.dart-protobuf"]
-	path = dart/protobuf.dart-protobuf
-	url = https://github.com/google/protobuf.dart
