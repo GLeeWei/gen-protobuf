@@ -1,0 +1,1 @@
+from gen_protoc_dart import protos_to_dart
